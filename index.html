@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MiamiMovieStore Premium</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#000;
+color:#fff;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:#111;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+height:70px;
+border-radius:12px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-size:18px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:red;
+}
+
+.search-box{
+text-align:center;
+padding:20px;
+}
+
+.search-box input{
+width:60%;
+padding:15px;
+border:none;
+border-radius:10px;
+font-size:18px;
+}
+
+.search-box button{
+padding:15px 25px;
+border:none;
+background:red;
+color:white;
+border-radius:10px;
+cursor:pointer;
+font-size:18px;
+}
+
+.hero{
+height:90vh;
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url('movie4.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+padding:60px;
+}
+
+.hero h1{
+font-size:70px;
+color:red;
+}
+
+.hero p{
+font-size:24px;
+max-width:700px;
+margin-top:20px;
+}
+
+.hero button{
+margin-top:30px;
+width:220px;
+padding:16px;
+background:red;
+border:none;
+border-radius:10px;
+font-size:20px;
+color:white;
+font-weight:bold;
+cursor:pointer;
+}
+
+.movies{
+padding:50px;
+}
+
+.movies h2{
+font-size:38px;
+margin-bottom:25px;
+color:red;
+}
+
+.movie-slider{
+display:flex;
+overflow-x:auto;
+gap:20px;
+padding-bottom:20px;
+}
+
+.movie-slider::-webkit-scrollbar{
+height:8px;
+}
+
+.movie-slider::-webkit-scrollbar-thumb{
+background:red;
+border-radius:10px;
+}
+
+.movie-card{
+min-width:240px;
+background:#111;
+border-radius:15px;
+overflow:hidden;
+transition:.3s;
+}
+
+.movie-card:hover{
+transform:scale(1.05);
+}
+
+.movie-card img{
+width:100%;
+height:340px;
+object-fit:cover;
+}
+
+.movie-info{
+padding:15px;
+}
+
+.movie-info h3{
+margin-bottom:10px;
+}
+
+.rating{
+color:gold;
+margin-bottom:12px;
+}
+
+.movie-info button{
+padding:10px 20px;
+border:none;
+background:red;
+color:white;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.trailer{
+padding:50px;
+text-align:center;
+}
+
+.trailer iframe{
+width:90%;
+height:500px;
+border:none;
+border-radius:15px;
+}
+
+.login{
+padding:50px;
+background:#111;
+text-align:center;
+}
+
+.login input{
+display:block;
+margin:15px auto;
+padding:15px;
+width:300px;
+border:none;
+border-radius:10px;
+font-size:16px;
+}
+
+.login button{
+padding:15px 30px;
+border:none;
+background:red;
+color:white;
+font-size:18px;
+border-radius:10px;
+cursor:pointer;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#111;
+margin-top:50px;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+.hero{
+padding:30px;
+text-align:center;
+}
+
+.hero h1{
+font-size:45px;
+}
+
+.hero p{
+font-size:20px;
+}
+
+.search-box input{
+width:90%;
+margin-bottom:10px;
+}
+
+.trailer iframe{
+height:250px;
+}
+}
+</style>
+
+</head>
+<body>
+
+<header>
+<img src="logo.jpg" class="logo">
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Movies</a>
+<a href="#">Series</a>
+<a href="#">Trending</a>
+<a href="#">Contact</a>
+</nav>
+</header>
+
+<div class="search-box">
+<input type="text" placeholder="Search movies...">
+<button>Search</button>
+</div>
+
+<section class="hero">
+<h1>MIAMI MOVIE STORE</h1>
+<p>Unlimited movies, action films and latest series in HD quality.</p>
+<button>Watch Now</button>
+</section>
+
+<section class="movies">
+<h2>Trending Movies</h2>
+
+<div class="movie-slider">
+
+<div class="movie-card">
+<img src="movie1.jpg">
+<div class="movie-info">
+<h3>The Crash</h3>
+<div class="rating">⭐⭐⭐⭐⭐</div>
+<button>Download</button>
+</div>
+</div>
+
+<div class="movie-card">
+<img src="movie2.jpg">
+<div class="movie-info">
+<h3>Widows Bay</h3>
+<div class="rating">⭐⭐⭐⭐</div>
+<button>Download</button>
+</div>
+</div>
+
+<div class="movie-card">
+<img src="movie3.jpg">
+<div class="movie-info">
+<h3>Gold Land</h3>
+<div class="rating">⭐⭐⭐⭐⭐</div>
+<button>Download</button>
+</div>
+</div>
+
+<div class="movie-card">
+<img src="movie4.jpg">
+<div class="movie-info">
+<h3>Jack Ryan</h3>
+<div class="rating">⭐⭐⭐⭐⭐</div>
+<button>Download</button>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="trailer">
+<h2 style="color:red;margin-bottom:20px;">Official Trailer</h2>
+
+<iframe src="https://www.youtube.com/embed/EXeTwQWrcwY?autoplay=1&mute=1"
+allow="autoplay"></iframe>
+
+</section>
+
+<section class="login">
+<h2 style="margin-bottom:20px;color:red;">Login</h2>
+
+<input type="text" placeholder="Username">
+<input type="password" placeholder="Password">
+
+<button>Login</button>
+
+</section>
+
+<footer>
+© 2026 MiamiMovieStore Premium | All Rights Reserved
+</footer>
+
+</body>
+</html>
