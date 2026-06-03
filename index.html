@@ -9,177 +9,89 @@ body{margin:0;background:#000;color:#fff;font-family:Arial}
 header{display:flex;justify-content:space-between;align-items:center;padding:15px 25px;background:#111;border-bottom:2px solid #e50914}
 .logo{height:70px}
 nav a{color:#fff;text-decoration:none;margin:0 10px}
-.hero{padding:60px 20px;text-align:center;background:#111}
-.movies{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px;padding:20px}
-.card{background:#111;border-radius:10px;padding:10px}
-.card img{width:100%;height:260px;object-fit:cover;border-radius:8px}
-.btn{display:block;text-align:center;padding:10px;margin-top:6px;border-radius:6px;text-decoration:none;font-weight:bold}
-.watch{background:#e50914;color:#fff}
-.download{background:#fff;color:#000}
-.whatsapp{position:fixed;right:20px;bottom:20px;background:#25D366;color:white;width:65px;height:65px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:30px}
-footer{border-top:1px solid #333;padding:20px;text-align:center}
+.hero{text-align:center;padding:40px;background:#111}
+.movies{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;padding:20px}
+.card{background:#111;padding:10px;border-radius:12px}
+.card img{width:100%;height:320px;object-fit:cover;border-radius:10px}
+.btn{display:block;text-align:center;padding:10px;margin-top:8px;text-decoration:none;border-radius:6px;font-weight:bold}
+.watch{background:#e50914;color:white}
+.download{background:white;color:black}
+.slider{width:100%;overflow:hidden;background:#111;padding:15px 0}
+.slide-track{display:flex;animation:slide 20s linear infinite}
+.slide-track img{width:250px;height:350px;object-fit:cover;margin:0 10px;border-radius:10px}
+@keyframes slide{
+0%{transform:translateX(0)}
+100%{transform:translateX(-50%)}
+}
+footer{text-align:center;padding:20px;border-top:1px solid #333}
 </style>
 <script>
 function pay(movie){
-alert("Lipia Tsh 2,000\nVodacom: 0749997410\nHalopesa: 0623857410\nAirtel Money: 14 381 5266\nJina: Richard Godson Skawa\n\nMovie: "+movie);
+alert("Lipia Tsh 2,000\\nVodacom: 0749997410\\nHalopesa: 0623857410\\nAirtel Money: 14 381 5266\\nJina: Richard Godson Skawa\\n\\nBaada ya malipo tuma screenshot WhatsApp.");
 }
 </script>
 </head>
 <body>
 
 <header>
-<img src="A6CA224A-6C4F-4FD2-8CC9-71716639CB14.jpeg" class="logo">
+<img src="logo.jpg" class="logo">
 <nav>
 <a href="#">Home</a>
-<a href="#">Trending Movies</a>
-<a href="#">TV Series</a>
+<a href="#">Movies</a>
 <a href="#">Series</a>
+<a href="#">Upcoming</a>
 </nav>
 </header>
 
 <section class="hero">
-<h1>MiamiMovieStore</h1>
-<p>Watch and Download Movies & TV Series</p>
+<h1>MIAMI MOVIES STUDIOS</h1>
+<p>Watch Trailers & Download Movies</p>
 </section>
 
+<h2 style="padding-left:20px">Upcoming Movies</h2>
+<div class="slider">
+<div class="slide-track">
+<img src="All American SEASON ONE- EPISODE 1-14 [BABU DJ 2026].jpg">
+<img src="28 YEARS LATER OMMY DJ 2026.jpg">
+<img src="30 Coins SEASON ONE- EPISODE 1-8 [BABU DJ 2026].jpg">
+<img src="All American SEASON ONE- EPISODE 1-14 [BABU DJ 2026].jpg">
+<img src="28 YEARS LATER OMMY DJ 2026.jpg">
+<img src="30 Coins SEASON ONE- EPISODE 1-8 [BABU DJ 2026].jpg">
+</div>
+</div>
+
 <h2 style="padding-left:20px">Latest Movies</h2>
+
 <div class="movies">
 
 <div class="card">
-<img src="https://picsum.photos/300/450?random=1">
-<h3>Movie 1</h3>
-<a href="#" onclick="pay('Movie 1')" class="btn watch">WATCH</a>
-<a href="#" onclick="pay('Movie 1')" class="btn download">DOWNLOAD</a>
-</div>
-<div class="card">
-<img src="https://picsum.photos/300/450?random=2">
-<h3>Movie 2</h3>
-<a href="#" onclick="pay('Movie 2')" class="btn watch">WATCH</a>
-<a href="#" onclick="pay('Movie 2')" class="btn download">DOWNLOAD</a>
-</div>
-<div class="card">
-<img src="https://picsum.photos/300/450?random=3">
-<h3>Movie 3</h3>
-<a href="#" onclick="pay('Movie 3')" class="btn watch">WATCH</a>
-<a href="#" onclick="pay('Movie 3')" class="btn download">DOWNLOAD</a>
-</div>
-<div class="card">
-<img src="https://picsum.photos/300/450?random=4">
-<h3>Movie 4</h3>
-<a href="#" onclick="pay('Movie 4')" class="btn watch">WATCH</a>
-<a href="#" onclick="pay('Movie 4')" class="btn download">DOWNLOAD</a>
-</div>
-<div class="card">
-<img src="https://picsum.photos/300/450?random=5">
-<h3>Movie 5</h3>
-<a href="#" onclick="pay('Movie 5')" class="btn watch">WATCH</a>
-<a href="#" onclick="pay('Movie 5')" class="btn download">DOWNLOAD</a>
-</div>
-<div class="card">
-<img src="https://picsum.photos/300/450?random=6">
-<h3>Movie 6</h3>
-<a href="#" onclick="pay('Movie 6')" class="btn watch">WATCH</a>
-<a href="#" onclick="pay('Movie 6')" class="btn download">DOWNLOAD</a>
-</div>
-<div class="card">
-<img src="https://picsum.photos/300/450?random=7">
-<h3>Movie 7</h3>
-<a href="#" onclick="pay('Movie 7')" class="btn watch">WATCH</a>
-<a href="#" onclick="pay('Movie 7')" class="btn download">DOWNLOAD</a>
-</div>
-<div class="card">
-<img src="https://picsum.photos/300/450?random=8">
-<h3>Movie 8</h3>
-<a href="#" onclick="pay('Movie 8')" class="btn watch">WATCH</a>
-<a href="#" onclick="pay('Movie 8')" class="btn download">DOWNLOAD</a>
-</div>
-<div class="card">
-<img src="https://picsum.photos/300/450?random=9">
-<h3>Movie 9</h3>
-<a href="#" onclick="pay('Movie 9')" class="btn watch">WATCH</a>
-<a href="#" onclick="pay('Movie 9')" class="btn download">DOWNLOAD</a>
-</div>
-<div class="card">
-<img src="https://picsum.photos/300/450?random=10">
-<h3>Movie 10</h3>
-<a href="#" onclick="pay('Movie 10')" class="btn watch">WATCH</a>
-<a href="#" onclick="pay('Movie 10')" class="btn download">DOWNLOAD</a>
-</div>
-<div class="card">
-<img src="https://picsum.photos/300/450?random=11">
-<h3>Movie 11</h3>
-<a href="#" onclick="pay('Movie 11')" class="btn watch">WATCH</a>
-<a href="#" onclick="pay('Movie 11')" class="btn download">DOWNLOAD</a>
-</div>
-<div class="card">
-<img src="https://picsum.photos/300/450?random=12">
-<h3>Movie 12</h3>
-<a href="#" onclick="pay('Movie 12')" class="btn watch">WATCH</a>
-<a href="#" onclick="pay('Movie 12')" class="btn download">DOWNLOAD</a>
-</div>
-<div class="card">
-<img src="https://picsum.photos/300/450?random=13">
-<h3>Movie 13</h3>
-<a href="#" onclick="pay('Movie 13')" class="btn watch">WATCH</a>
-<a href="#" onclick="pay('Movie 13')" class="btn download">DOWNLOAD</a>
-</div>
-<div class="card">
-<img src="https://picsum.photos/300/450?random=14">
-<h3>Movie 14</h3>
-<a href="#" onclick="pay('Movie 14')" class="btn watch">WATCH</a>
-<a href="#" onclick="pay('Movie 14')" class="btn download">DOWNLOAD</a>
-</div>
-<div class="card">
-<img src="https://picsum.photos/300/450?random=15">
-<h3>Movie 15</h3>
-<a href="#" onclick="pay('Movie 15')" class="btn watch">WATCH</a>
-<a href="#" onclick="pay('Movie 15')" class="btn download">DOWNLOAD</a>
-</div>
-<div class="card">
-<img src="https://picsum.photos/300/450?random=16">
-<h3>Movie 16</h3>
-<a href="#" onclick="pay('Movie 16')" class="btn watch">WATCH</a>
-<a href="#" onclick="pay('Movie 16')" class="btn download">DOWNLOAD</a>
-</div>
-<div class="card">
-<img src="https://picsum.photos/300/450?random=17">
-<h3>Movie 17</h3>
-<a href="#" onclick="pay('Movie 17')" class="btn watch">WATCH</a>
-<a href="#" onclick="pay('Movie 17')" class="btn download">DOWNLOAD</a>
-</div>
-<div class="card">
-<img src="https://picsum.photos/300/450?random=18">
-<h3>Movie 18</h3>
-<a href="#" onclick="pay('Movie 18')" class="btn watch">WATCH</a>
-<a href="#" onclick="pay('Movie 18')" class="btn download">DOWNLOAD</a>
-</div>
-<div class="card">
-<img src="https://picsum.photos/300/450?random=19">
-<h3>Movie 19</h3>
-<a href="#" onclick="pay('Movie 19')" class="btn watch">WATCH</a>
-<a href="#" onclick="pay('Movie 19')" class="btn download">DOWNLOAD</a>
-</div>
-<div class="card">
-<img src="https://picsum.photos/300/450?random=20">
-<h3>Movie 20</h3>
-<a href="#" onclick="pay('Movie 20')" class="btn watch">WATCH</a>
-<a href="#" onclick="pay('Movie 20')" class="btn download">DOWNLOAD</a>
-</div>
+<img src="All American SEASON ONE- EPISODE 1-14 [BABU DJ 2026].jpg">
+<h3>All American</h3>
+<a class="btn watch" href="https://docs.google.com/uc?export=download&id=1Jh6x9FoVDcli7Uzf9wPCOA1AA8Exinc4" target="_blank">WATCH TRAILER</a>
+<a class="btn download" href="#" onclick="pay('All American')">DOWNLOAD</a>
 </div>
 
-<h2 style="padding-left:20px">Trending Movies</h2>
-<div class="movies">
-<div class="card"><img src="https://picsum.photos/300/450?random=51"></div>
-<div class="card"><img src="https://picsum.photos/300/450?random=52"></div>
-<div class="card"><img src="https://picsum.photos/300/450?random=53"></div>
-<div class="card"><img src="https://picsum.photos/300/450?random=54"></div>
+<div class="card">
+<img src="28 YEARS LATER OMMY DJ 2026.jpg">
+<h3>Strike Back Collection</h3>
+<a class="btn watch" href="https://docs.google.com/uc?export=download&id=1Jh6x9FoVDcli7Uzf9wPCOA1AA8Exinc4" target="_blank">WATCH TRAILER</a>
+<a class="btn download" href="#" onclick="pay('Strike Back')">DOWNLOAD</a>
+<p>
+Episode 1, 2 & 3 zimeunganishwa kwenye cover hii.
+</p>
 </div>
 
-<a class="whatsapp" href="https://wa.me/255749997410">💬</a>
+<div class="card">
+<img src="30 Coins SEASON ONE- EPISODE 1-8 [BABU DJ 2026].jpg">
+<h3>30 Coins</h3>
+<a class="btn watch" href="https://docs.google.com/uc?export=download&id=1Jh6x9FoVDcli7Uzf9wPCOA1AA8Exinc4" target="_blank">WATCH TRAILER</a>
+<a class="btn download" href="#" onclick="pay('30 Coins')">DOWNLOAD</a>
+</div>
+
+</div>
 
 <footer>
-<p>© 2026 MiamiMovieStore. All Rights Reserved.</p>
-<p>Development by Dvj Richie</p>
+<p>© 2026 MiamiMovieStore</p>
 </footer>
 
 </body>
