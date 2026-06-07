@@ -3,96 +3,222 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MiamiMovieStore</title>
+<title>Miami Movie Store 2026</title>
 <style>
-body{margin:0;background:#000;color:#fff;font-family:Arial}
-header{display:flex;justify-content:space-between;align-items:center;padding:15px 25px;background:#111;border-bottom:2px solid #e50914}
-.logo{height:70px}
-nav a{color:#fff;text-decoration:none;margin:0 10px}
-.hero{text-align:center;padding:40px;background:#111}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#0a0a0a;color:#fff}
+header{position:sticky;top:0;background:#111;padding:15px 25px;display:flex;justify-content:space-between;z-index:1000;border-bottom:2px solid #e50914}
+.logo{font-size:30px;font-weight:bold;color:#e50914}
+.hero{height:85vh;background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.9)),url('https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?q=80&w=1600') center/cover;display:flex;flex-direction:column;justify-content:center;padding:40px}
+.hero h1{font-size:60px;color:#e50914}
+.hero p{font-size:22px;margin-top:10px}
+.search{padding:20px;text-align:center}
+.search input{width:90%;max-width:700px;padding:15px;border-radius:30px;border:none}
+.title{padding:20px;color:#e50914}
 .movies{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;padding:20px}
-.card{background:#111;padding:10px;border-radius:12px}
-.card img{width:100%;height:320px;object-fit:cover;border-radius:10px}
-.btn{display:block;text-align:center;padding:10px;margin-top:8px;text-decoration:none;border-radius:6px;font-weight:bold}
+.card{background:#151515;border-radius:12px;overflow:hidden}
+.card img{width:100%;height:330px;object-fit:cover}
+.card h3{padding:10px}
+.btn{display:block;margin:10px;padding:12px;text-align:center;text-decoration:none;border-radius:8px;font-weight:bold}
 .watch{background:#e50914;color:white}
 .download{background:white;color:black}
-.slider{width:100%;overflow:hidden;background:#111;padding:15px 0}
-.slide-track{display:flex;animation:slide 20s linear infinite}
-.slide-track img{width:250px;height:350px;object-fit:cover;margin:0 10px;border-radius:10px}
-@keyframes slide{
-0%{transform:translateX(0)}
-100%{transform:translateX(-50%)}
-}
-footer{text-align:center;padding:20px;border-top:1px solid #333}
+.slider{display:flex;overflow:auto;gap:15px;padding:20px}
+.slider img{height:300px;border-radius:10px}
+.popup{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);justify-content:center;align-items:center;z-index:9999}
+.box{background:#111;padding:25px;border-radius:15px;max-width:450px}
+footer{padding:30px;text-align:center;background:#111;margin-top:40px}
 </style>
-<script>
-function pay(movie){
-alert("Lipia Tsh 2,000\\nVodacom: 0749997410\\nHalopesa: 0623857410\\nAirtel Money: 14 381 5266\\nJina: Richard Godson Skawa\\n\\nBaada ya malipo tuma screenshot WhatsApp.");
-}
-</script>
 </head>
 <body>
 
 <header>
-<img src="logo.jpg" class="logo">
-<nav>
-<a href="#">Home</a>
-<a href="#">Movies</a>
-<a href="#">Series</a>
-<a href="#">Upcoming</a>
-</nav>
+<div class="logo">MIAMI MOVIE STORE</div>
 </header>
 
 <section class="hero">
-<h1>MIAMI MOVIES STUDIOS</h1>
-<p>Watch Trailers & Download Movies</p>
+<h1>WATCH & DOWNLOAD</h1>
+<p>Latest Movies, Series & DJ Content</p>
 </section>
 
-<h2 style="padding-left:20px">Upcoming Movies</h2>
-<div class="slider">
-<div class="slide-track">
-<img src="All American SEASON ONE- EPISODE 1-14 [BABU DJ 2026].jpg">
-<img src="28 YEARS LATER OMMY DJ 2026.jpg">
-<img src="30 Coins SEASON ONE- EPISODE 1-8 [BABU DJ 2026].jpg">
-<img src="All American SEASON ONE- EPISODE 1-14 [BABU DJ 2026].jpg">
-<img src="28 YEARS LATER OMMY DJ 2026.jpg">
-<img src="30 Coins SEASON ONE- EPISODE 1-8 [BABU DJ 2026].jpg">
-</div>
+<div class="search">
+<input type="text" placeholder="Search Movies...">
 </div>
 
-<h2 style="padding-left:20px">Latest Movies</h2>
+<h2 class="title">Upcoming Movies</h2>
+<div class="slider">
+<img src="https://picsum.photos/220/300?1">
+<img src="https://picsum.photos/220/300?2">
+<img src="https://picsum.photos/220/300?3">
+<img src="https://picsum.photos/220/300?4">
+<img src="https://picsum.photos/220/300?5">
+</div>
+
+<h2 class="title">Latest Movies</h2>
 
 <div class="movies">
-
 <div class="card">
-<img src="All American SEASON ONE- EPISODE 1-14 [BABU DJ 2026].jpg">
-<h3>All American</h3>
-<a class="btn watch" href="https://docs.google.com/uc?export=download&id=1Jh6x9FoVDcli7Uzf9wPCOA1AA8Exinc4" target="_blank">WATCH TRAILER</a>
-<a class="btn download" href="#" onclick="pay('All American')">DOWNLOAD</a>
+<img src="https://docs.google.com/uc?export=download&id=1qczyYd3fmMkdrvFLut-dj2DsuXvFtLFd">
+<h3>28 YEARS LATER</h3>
+<a class="btn watch" href="https://docs.google.com/uc?export=download&id=1Jh6x9FoVDcli7Uzf9wPCOA1AA8Exinc4" target="_blank">Watch Trailer</a>
+<a class="btn download" href="#" onclick="pay()">Download Movie</a>
 </div>
 
 <div class="card">
-<img src="28 YEARS LATER OMMY DJ 2026.jpg">
-<h3>Strike Back Collection</h3>
-<a class="btn watch" href="https://docs.google.com/uc?export=download&id=1Jh6x9FoVDcli7Uzf9wPCOA1AA8Exinc4" target="_blank">WATCH TRAILER</a>
-<a class="btn download" href="#" onclick="pay('Strike Back')">DOWNLOAD</a>
-<p>
-Episode 1, 2 & 3 zimeunganishwa kwenye cover hii.
-</p>
+<img src="https://docs.google.com/uc?export=download&id=1MKyRhk5JYxA6wLexe9lfUUocJQrnLdIM">
+<h3>30 COINS</h3>
+<a class="btn watch" href="https://docs.google.com/uc?export=download&id=1Jh6x9FoVDcli7Uzf9wPCOA1AA8Exinc4" target="_blank">Watch Trailer</a>
+<a class="btn download" href="#" onclick="pay()">Download Movie</a>
 </div>
 
 <div class="card">
-<img src="30 Coins SEASON ONE- EPISODE 1-8 [BABU DJ 2026].jpg">
-<h3>30 Coins</h3>
-<a class="btn watch" href="https://docs.google.com/uc?export=download&id=1Jh6x9FoVDcli7Uzf9wPCOA1AA8Exinc4" target="_blank">WATCH TRAILER</a>
-<a class="btn download" href="#" onclick="pay('30 Coins')">DOWNLOAD</a>
+<img src="https://docs.google.com/uc?export=download&id=18cq19Q-URn74Sl9tsBXaglrcgXtzBJAY">
+<h3>ALL AMERICAN</h3>
+<a class="btn watch" href="https://docs.google.com/uc?export=download&id=1Jh6x9FoVDcli7Uzf9wPCOA1AA8Exinc4" target="_blank">Watch Trailer</a>
+<a class="btn download" href="#" onclick="pay()">Download Movie</a>
 </div>
 
+<div class="card">
+<img src="https://docs.google.com/uc?export=download&id=1iUIPgeBb1l3aHbCBLtV6PMLKNwzvMLnA">
+<h3>ANACONDA</h3>
+<a class="btn watch" href="https://docs.google.com/uc?export=download&id=1Jh6x9FoVDcli7Uzf9wPCOA1AA8Exinc4" target="_blank">Watch Trailer</a>
+<a class="btn download" href="#" onclick="pay()">Download Movie</a>
+</div>
+
+<div class="card">
+<img src="https://docs.google.com/uc?export=download&id=1yaqv1ZmDpUQlm03ZZwfB9VByHzB36Qh1">
+<h3>ALL THE QUEENS MEN</h3>
+<a class="btn watch" href="https://docs.google.com/uc?export=download&id=1Jh6x9FoVDcli7Uzf9wPCOA1AA8Exinc4" target="_blank">Watch Trailer</a>
+<a class="btn download" href="#" onclick="pay()">Download Movie</a>
+</div>
+
+<div class="card">
+<img src="https://docs.google.com/uc?export=download&id=1FZc8F-dcICADEZJL7TK3Uw-dsh_DFrVK">
+<h3>ANAK KUNTI</h3>
+<a class="btn watch" href="https://docs.google.com/uc?export=download&id=1Jh6x9FoVDcli7Uzf9wPCOA1AA8Exinc4" target="_blank">Watch Trailer</a>
+<a class="btn download" href="#" onclick="pay()">Download Movie</a>
+</div>
+
+<div class="card">
+<img src="https://docs.google.com/uc?export=download&id=1pSFcc2wpbVEVsIDgcEqkUSnSxJQXsdx7">
+<h3>APOCALYPSE Z</h3>
+<a class="btn watch" href="https://docs.google.com/uc?export=download&id=1Jh6x9FoVDcli7Uzf9wPCOA1AA8Exinc4" target="_blank">Watch Trailer</a>
+<a class="btn download" href="#" onclick="pay()">Download Movie</a>
+</div>
+
+<div class="card">
+<img src="https://docs.google.com/uc?export=download&id=1Wm7AUTpIHY-6FzgxQOHXFtq7tdEkk0Y0">
+<h3>APOCALYPTO</h3>
+<a class="btn watch" href="https://docs.google.com/uc?export=download&id=1Jh6x9FoVDcli7Uzf9wPCOA1AA8Exinc4" target="_blank">Watch Trailer</a>
+<a class="btn download" href="#" onclick="pay()">Download Movie</a>
+</div>
+
+<div class="card">
+<img src="https://docs.google.com/uc?export=download&id=1IQqtTApzucidWgpYvbfRIqqsAoAuJTQP">
+<h3>BEAUTY IN BLACK</h3>
+<a class="btn watch" href="https://docs.google.com/uc?export=download&id=1Jh6x9FoVDcli7Uzf9wPCOA1AA8Exinc4" target="_blank">Watch Trailer</a>
+<a class="btn download" href="#" onclick="pay()">Download Movie</a>
+</div>
+
+<div class="card">
+<img src="https://docs.google.com/uc?export=download&id=1ttIlTVAR3RauX5FyS2Zgd7kvxmYaTUNP">
+<h3>BETTER CALL SAUL</h3>
+<a class="btn watch" href="https://docs.google.com/uc?export=download&id=1Jh6x9FoVDcli7Uzf9wPCOA1AA8Exinc4" target="_blank">Watch Trailer</a>
+<a class="btn download" href="#" onclick="pay()">Download Movie</a>
+</div>
+
+<div class="card">
+<img src="https://docs.google.com/uc?export=download&id=106QOrwS0qaQ229W__t-KBkShyONuvnkO">
+<h3>CALL OF THE DEAD</h3>
+<a class="btn watch" href="https://docs.google.com/uc?export=download&id=1Jh6x9FoVDcli7Uzf9wPCOA1AA8Exinc4" target="_blank">Watch Trailer</a>
+<a class="btn download" href="#" onclick="pay()">Download Movie</a>
+</div>
+
+<div class="card">
+<img src="https://docs.google.com/uc?export=download&id=1v9wGXJpwBgEdfJy0sndlRTlWrb-4K19I">
+<h3>CHIEF OF WAR</h3>
+<a class="btn watch" href="https://docs.google.com/uc?export=download&id=1Jh6x9FoVDcli7Uzf9wPCOA1AA8Exinc4" target="_blank">Watch Trailer</a>
+<a class="btn download" href="#" onclick="pay()">Download Movie</a>
+</div>
+
+<div class="card">
+<img src="https://docs.google.com/uc?export=download&id=1dMQ6tG3Pl1AbCye8vMv6RxQ9JIbWUZJv">
+<h3>COLONY</h3>
+<a class="btn watch" href="https://docs.google.com/uc?export=download&id=1Jh6x9FoVDcli7Uzf9wPCOA1AA8Exinc4" target="_blank">Watch Trailer</a>
+<a class="btn download" href="#" onclick="pay()">Download Movie</a>
+</div>
+
+<div class="card">
+<img src="https://docs.google.com/uc?export=download&id=1iIa8NpvfU8U1J7GOIB6xIGQmwBCiO206">
+<h3>DAYLIGHT'S END</h3>
+<a class="btn watch" href="https://docs.google.com/uc?export=download&id=1Jh6x9FoVDcli7Uzf9wPCOA1AA8Exinc4" target="_blank">Watch Trailer</a>
+<a class="btn download" href="#" onclick="pay()">Download Movie</a>
+</div>
+
+<div class="card">
+<img src="https://docs.google.com/uc?export=download&id=1eAlj8YYY9NK9zluGrpzVh8HmOylggj9J">
+<h3>DEAD 7</h3>
+<a class="btn watch" href="https://docs.google.com/uc?export=download&id=1Jh6x9FoVDcli7Uzf9wPCOA1AA8Exinc4" target="_blank">Watch Trailer</a>
+<a class="btn download" href="#" onclick="pay()">Download Movie</a>
+</div>
+
+<div class="card">
+<img src="https://docs.google.com/uc?export=download&id=1OFHPQoyf7jxLU01o1HR54-6AEpgGwJ6c">
+<h3>DEAD SNOW 2</h3>
+<a class="btn watch" href="https://docs.google.com/uc?export=download&id=1Jh6x9FoVDcli7Uzf9wPCOA1AA8Exinc4" target="_blank">Watch Trailer</a>
+<a class="btn download" href="#" onclick="pay()">Download Movie</a>
+</div>
+
+<div class="card">
+<img src="https://docs.google.com/uc?export=download&id=1OAC8Ku2ZLqD4ltmOOopMDRbV_Mf1_1Uo">
+<h3>DEMON CITY</h3>
+<a class="btn watch" href="https://docs.google.com/uc?export=download&id=1Jh6x9FoVDcli7Uzf9wPCOA1AA8Exinc4" target="_blank">Watch Trailer</a>
+<a class="btn download" href="#" onclick="pay()">Download Movie</a>
+</div>
+
+<div class="card">
+<img src="https://docs.google.com/uc?export=download&id=1yeP1JSRk3ppx-h3KF6rr7dA5FObPboYL">
+<h3>DHADKAN</h3>
+<a class="btn watch" href="https://docs.google.com/uc?export=download&id=1Jh6x9FoVDcli7Uzf9wPCOA1AA8Exinc4" target="_blank">Watch Trailer</a>
+<a class="btn download" href="#" onclick="pay()">Download Movie</a>
+</div>
+
+<div class="card">
+<img src="https://docs.google.com/uc?export=download&id=1Rf5j4lTsKSnVtdPgRfrf_2RoHt_E9Wcd">
+<h3>DUCHESS</h3>
+<a class="btn watch" href="https://docs.google.com/uc?export=download&id=1Jh6x9FoVDcli7Uzf9wPCOA1AA8Exinc4" target="_blank">Watch Trailer</a>
+<a class="btn download" href="#" onclick="pay()">Download Movie</a>
+</div>
+
+<div class="card">
+<img src="https://docs.google.com/uc?export=download&id=1SzKwk5dC6gK8Lbeav1cuoHmq7eh7R4PA">
+<h3>EMPIRE</h3>
+<a class="btn watch" href="https://docs.google.com/uc?export=download&id=1Jh6x9FoVDcli7Uzf9wPCOA1AA8Exinc4" target="_blank">Watch Trailer</a>
+<a class="btn download" href="#" onclick="pay()">Download Movie</a>
+</div>
+</div><div class="popup" id="paybox">
+<div class="box">
+<h2>💳 LIPIA KWANZA</h2>
+<p>Baada ya kulipia tuma screenshot WhatsApp.</p><br>
+<p><b>Vodacom:</b> 0749997410</p>
+<p><b>Airtel Money:</b> 14 381 5266</p>
+<p><b>Halopesa:</b> 0623857410</p><br>
+<a class="btn watch" href="https://wa.me/255749997410?text=Nimetuma%20malipo">Tuma Screenshot</a>
+<button class="btn download" onclick="closePay()">Funga</button>
+</div>
 </div>
 
 <footer>
-<p>© 2026 MiamiMovieStore</p>
+© 2026 Miami Movie Store
 </footer>
+
+<script>
+function pay(){
+document.getElementById('paybox').style.display='flex';
+}
+function closePay(){
+document.getElementById('paybox').style.display='none';
+}
+</script>
 
 </body>
 </html>
